@@ -1,11 +1,11 @@
 <?php
-echo getRealIpAddr();
+echo 
 
-echo ip_info("173.252.110.27", "Country"); // United States
-echo ip_info("173.252.110.27", "Country Code"); // US
-echo ip_info("173.252.110.27", "State"); // California
-echo ip_info("173.252.110.27", "City"); // Menlo Park
-echo ip_info("173.252.110.27", "Address"); // Menlo Park, California, United States
+echo ip_info(getRealIpAddr();, "Country"); // United States
+echo ip_info(getRealIpAddr();, "Country Code"); // US
+echo ip_info(getRealIpAddr();, "State"); // California
+echo ip_info(getRealIpAddr();, "City"); // Menlo Park
+echo ip_info(getRealIpAddr();, "Address"); // Menlo Park, California, United States
 function getRealIpAddr()
 {
     if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
