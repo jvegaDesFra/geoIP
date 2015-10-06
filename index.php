@@ -1,5 +1,6 @@
 <?php
-$miArray = array("ip"=>getRealIpAddr(), "country_code"=>ip_info(getRealIpAddr(), "Country Code"), "Country"=>ip_info(getRealIpAddr(), "Country"));
+$ip_ = getRealIpAddr();
+$miArray = array("ip"=>$ip_, "country_code"=>ip_info($ip_, "Country Code"), "Country"=>ip_info($ip_, "Country"));
 print_r(json_encode($miArray));
 //{"ip":"201.116.117.173","":"MX","country_name":"MÃ©xico","region_code":"","region_name":"","city":"","zip_code":"","time_zone":"","latitude":19.43,"longitude":-99.13,"metro_code":0}
 //echo ip_info(getRealIpAddr(), "Country"); // United States
