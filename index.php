@@ -1,6 +1,6 @@
 <?php
 echo $_SERVER['HTTP_CLIENT_IP'];
-echo $_SERVER['REMOTE_ADDR'];
+
 echo ip_info("173.252.110.27", "Country"); // United States
 echo ip_info("173.252.110.27", "Country Code"); // US
 echo ip_info("173.252.110.27", "State"); // California
