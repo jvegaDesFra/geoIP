@@ -1,5 +1,11 @@
 <?php
-
+echo ip_info("Visitor", "Country");
+print_r(ip_info("Visitor", "Location"));
+echo ip_info("173.252.110.27", "Country"); // United States
+echo ip_info("173.252.110.27", "Country Code"); // US
+echo ip_info("173.252.110.27", "State"); // California
+echo ip_info("173.252.110.27", "City"); // Menlo Park
+echo ip_info("173.252.110.27", "Address"); // Menlo Park, California, United States
 function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
     $output = NULL;
     if (filter_var($ip, FILTER_VALIDATE_IP) === FALSE) {
