@@ -1,7 +1,7 @@
 <?php
-$miArray = array("manzana"=>"verde", "uva"=>"Morada", "fresa"=>"roja");
+$miArray = array("ip"=>getRealIpAddr(), "uva"=>"Morada", "fresa"=>"roja");
 print_r(json_encode($miArray));
-echo '{"ip":"'.getRealIpAddr().'"}';
+
 echo ip_info(getRealIpAddr(), "Country"); // United States
 echo ip_info(getRealIpAddr(), "Country Code"); // US
 echo ip_info(getRealIpAddr(), "State"); // California
