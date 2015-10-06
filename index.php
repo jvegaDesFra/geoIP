@@ -1,6 +1,5 @@
 <?php
-echo ip_info("Visitor", "Country");
-print_r(ip_info("Visitor", "Location"));
+
 echo ip_info("173.252.110.27", "Country"); // United States
 echo ip_info("173.252.110.27", "Country Code"); // US
 echo ip_info("173.252.110.27", "State"); // California
