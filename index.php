@@ -1,5 +1,4 @@
 <?php
-echo 
 
 echo ip_info(getRealIpAddr();, "Country"); // United States
 echo ip_info(getRealIpAddr();, "Country Code"); // US
