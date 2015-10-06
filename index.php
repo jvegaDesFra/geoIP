@@ -1,12 +1,12 @@
 <?php
-$miArray = array("ip"=>getRealIpAddr(), "uva"=>"Morada", "fresa"=>"roja");
+$miArray = array("ip"=>getRealIpAddr(), "country_code"=>ip_info(getRealIpAddr(), "Country Code"), "Country"=>ip_info(getRealIpAddr(), "Country"));
 print_r(json_encode($miArray));
-
-echo ip_info(getRealIpAddr(), "Country"); // United States
-echo ip_info(getRealIpAddr(), "Country Code"); // US
-echo ip_info(getRealIpAddr(), "State"); // California
-echo ip_info(getRealIpAddr(), "City"); // Menlo Park
-echo ip_info(getRealIpAddr(), "Address"); // Menlo Park, California, United States
+//{"ip":"201.116.117.173","":"MX","country_name":"MÃ©xico","region_code":"","region_name":"","city":"","zip_code":"","time_zone":"","latitude":19.43,"longitude":-99.13,"metro_code":0}
+//echo ip_info(getRealIpAddr(), "Country"); // United States
+//echo ip_info(getRealIpAddr(), "Country Code"); // US
+//echo ip_info(getRealIpAddr(), "State"); // California
+//echo ip_info(getRealIpAddr(), "City"); // Menlo Park
+//echo ip_info(getRealIpAddr(), "Address"); // Menlo Park, California, United States
 function getRealIpAddr()
 {
     if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
