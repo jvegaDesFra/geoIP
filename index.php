@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 $ip_ = getRealIpAddr();
 $miArray = array("ip"=>$ip_, "country_code"=>ip_info($ip_, "Country Code"), "Country"=>ip_info($ip_, "Country"));
 print_r(json_encode($miArray));
