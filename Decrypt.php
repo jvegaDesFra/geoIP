@@ -1,6 +1,6 @@
 <?php 
 $valor = $_GET["valor"];
-echo encriptar($valor);
+echo desencriptar($valor);
 function encriptar($cadena){
     $key='ilumovil';  // Una clave de codificacion, debe usarse la misma para encriptar y desencriptar
     $encrypted = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($key), $cadena, MCRYPT_MODE_CBC, md5(md5($key))));
