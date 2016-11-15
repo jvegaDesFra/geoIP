@@ -9,11 +9,11 @@ $tipo = $_GET["tipo"];
 
 if($tipo == 1)
 {    
-    echo encriptar($valor);
+    echo encrypt($valor,'ilumobile');
 }
 else
 {
-    echo desencriptar($valor);
+    echo decrypt($valor,'ilumobile');
 }
 
 function encriptar($cadena){
@@ -27,4 +27,26 @@ function desencriptar($cadena){
      $key='ilumovil';  // Una clave de codificacion, debe usarse la misma para encriptar y desencriptar
      $decrypted = rtrim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, md5($key), base64_decode($cadena), MCRYPT_MODE_CBC, md5(md5($key))), "\0");
     return $decrypted;  //Devuelve el string desencriptado
+}
+
+function encrypt($string, $key) {
+   $result = '';
+   for($i=0; $i<strlen($string); $i++) {
+      $char = substr($string, $i, 1);
+      $keychar = substr($key, ($i % strlen($key))-1, 1);
+      $char = chr(ord($char)+ord($keychar));
+      $result.=$char;
+   }
+   return base64_encode($result);
+}
+function decrypt($string, $key) {
+   $result = '';
+   $string = base64_decode($string);
+   for($i=0; $i<strlen($string); $i++) {
+      $char = substr($string, $i, 1);
+      $keychar = substr($key, ($i % strlen($key))-1, 1);
+      $char = chr(ord($char)-ord($keychar));
+      $result.=$char;
+   }
+   return $result;
 }
