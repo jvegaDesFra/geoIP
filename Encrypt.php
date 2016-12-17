@@ -9,7 +9,7 @@ $tipo = $_GET["tipo"];
 
 if($tipo == 1)
 {    
-    echo encrypt($valor,'ilumobile');
+    echo json_encode(($valor,'ilumobile'));
 }
 else
 {
