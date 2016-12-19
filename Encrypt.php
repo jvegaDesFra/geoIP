@@ -13,7 +13,7 @@ if($tipo == 1)
 }
 else
 {
-    echo decrypt($valor,'ilumobile');
+    echo json_encode(decrypt($valor,'ilumobile'));
 }
 
 function encriptar($cadena){
