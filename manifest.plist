@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://10.150.35.133/DiltexApps/app.ipa</string>
+					<string>https://a1.files.diawi.com/app-file/tRkHOEQEMg7DQVLpNwDX.ipa</string>
 				</dict>				
 			</array>
 			<key>metadata</key>
@@ -19,12 +19,13 @@
 				<key>bundle-identifier</key>
 				<string>com.diltex.davidsbridal</string>
 				<key>bundle-version</key>
-				<string>1.0.0</string>
+				<string>17.2.23</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
 				<string>The Title To Present To The User installing the app</string>
 			</dict>
+			
 		</dict>
 	</array>
 </dict>
